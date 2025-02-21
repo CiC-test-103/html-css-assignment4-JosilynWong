@@ -59,13 +59,12 @@ body {
 
 /* A blue gradient circle */
 .blue-gradient-circle {
-  /* extra seperation from elements above and below it */
-  margin: 15px;
   /* start with a square box */
   aspect-ratio: 1/1;
   /* make it circle */
   border-radius: 50%;
-  padding: 1.5em 3em;
+  /* content padding */
+  padding: 1.5rem 3rem;
   background-image: linear-gradient(var(--gra-violetBlue), var(--gra-persianBlue));
 }
 
@@ -147,19 +146,23 @@ body {
 
 /* Section heading text */
 .section-heading-text {
-  font-size: 1.4em;
+  /* extra margin at the bottom */
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
   font-weight: var(--fw-bold);
 }
 
 /* Comment heading text */
 .comment-heading-text {
-  font-size: 1.9em;
+  /* extra margin at the top */
+  margin-top: 1.2rem;
+  font-size: 1.9rem;
   font-weight: var(--fw-bold);
 }
 
 /* Score result text */
 .score-result-text {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: var(--fw-black);
 }
 
@@ -196,15 +199,16 @@ body {
 
 /* A nested flex row container */
 .flex-row-container {
-  margin: 5px 0px;
-  padding: 12px;
+  /* extra margin between flex row containers */
+  margin: 0.7rem 0px;
+  padding: 0.7rem;
   display: flex;
   border-radius: 10px;
 }
 
 /* SVG row item */
 .row-item-svg {
-  margin-right: 12px;
+  margin-right: 0.7rem;
 }
 
 /* Label row item */
@@ -229,26 +233,27 @@ body {
 
 /* Padding for the result flex column */
 .result-padding {
-  padding: 40px 50px;
+  padding: 2.3rem 2.8rem;
 }
 
 /* Padding for the summary flex column */
 .summary-padding {
-  padding: 40px 20px;
+  padding: 2.3rem 1.2rem;
 }
 
 /* A dark gray blue button with white text */
 button {
   background-color: var(--clr-darkGrayBlue);
   color: var(--clr-white);
-  padding: 12px;
-  margin-top: 20px;
+  padding: 0.7rem;
+  /* extra margin at the top */
+  margin-top: 1.2rem;
   border-radius: 30px;
 }
 
 /* Footer top margin */
 footer {
-  margin-top: 20px;
+  margin-top: 1.2rem;
 }
 
 /* For larger screen devices */
@@ -271,9 +276,14 @@ footer {
     border-radius: 30px; /* add rounded corners */
   }
 
+  /* Adjust for nested flex row column */
+  .flex-row-container {
+    margin: 0; /* reset margin */
+  }
+
   /* Adjust padding for the summary column */
   .summary-padding {
-    padding: 40px 50px;
+    padding: 2.3rem 2.8rem;
   }
 }
 
