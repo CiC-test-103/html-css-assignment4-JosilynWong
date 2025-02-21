@@ -48,6 +48,235 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Your CSS Below **/
 
+/* Body background and default font settings */
+body {
+  background-color: var(--clr-paleBlue);
+  font-family: var(--fs-base);
+  font-size: var(--font-paragraph);
+}
+
+/** Background CSS **/
+
+/* A blue gradient circle */
+.blue-gradient-circle {
+  /* extra seperation from elements above and below it */
+  margin: 15px;
+  /* start with a square box */
+  aspect-ratio: 1/1;
+  /* make it circle */
+  border-radius: 50%;
+  padding: 1.5em 3em;
+  background-image: linear-gradient(var(--gra-violetBlue), var(--gra-persianBlue));
+}
+
+/* A blue gradient background */
+.blue-gradient-background {
+  background-image: linear-gradient(var(--gra-lightSlateBlue), var(--gra-lightRoyalBlue));
+}
+
+/* A translucent light red background */
+.lightRed-background {
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+/* A translucent orange yellow background */
+.orangeYellow-background {
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+/* A translucent green teal background */
+.greenTeal-background {
+  background-color: hsla(166, 100%, 40%, 0.05);
+}
+
+/* A translucent cobalt blue background */
+.cobaltBlue-background {
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+/** Text CSS **/
+
+/* Light red text */
+.lightRed-text {
+  color: var(--clr-lightRed);
+  font-weight: var(--fw-bold);
+}
+
+/* Orange yellow text */
+.orangeYellow-text {
+  color: var(--clr-orangeYellow);
+  font-weight: var(--fw-bold);
+}
+
+/* Green teal text */
+.greenTeal-text {
+  color: var(--clr-greenTeal);
+  font-weight: var(--fw-bold);
+}
+
+/* Cobalt blue text */
+.cobaltBlue-text {
+  color: var(--clr-cobaltBlue);
+  font-weight: var(--fw-bold);
+}
+
+/* White text */
+.white-text {
+  color: var(--clr-white);
+}
+
+/* Pale blue text */
+.paleBlue-text {
+  color: var(--clr-paleBlue);
+}
+
+/* Light lavender text */
+.lightLavender-text {
+  color: var(--clr-lightLavender);
+}
+
+/* Dark grey blue text */
+.darkGreyBlue-text {
+  color: var(--clr-darkGrayBlue);
+}
+
+/* Ligth slate blue text */
+.lightSlateBlue-text {
+  color: var(--gra-lightSlateBlue);
+}
+
+/* Section heading text */
+.section-heading-text {
+  font-size: 1.4em;
+  font-weight: var(--fw-bold);
+}
+
+/* Comment heading text */
+.comment-heading-text {
+  font-size: 1.9em;
+  font-weight: var(--fw-bold);
+}
+
+/* Score result text */
+.score-result-text {
+  font-size: 4em;
+  font-weight: var(--fw-black);
+}
+
+/* Center align text */
+.center-aligned-text {
+  text-align: center;
+}
+
+/** Flexbox CSS **/
+
+/* Rounded corner box (default for small screen) */
+.rounded-corners {
+  border-radius: 0px 0px 30px 30px;
+}
+
+/* The main flex container (default for small screen) */
+.main-flex-container {
+  background-color: var(--clr-white);
+  width: 100%; /* takes entire width of screen */
+  margin: auto;
+  aspect-ratio: 7/15; /* adjust height to maintain aspect ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+/* A nested flex column container */
+.flex-column-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* A nested flex row container */
+.flex-row-container {
+  margin: 5px 0px;
+  padding: 12px;
+  display: flex;
+  border-radius: 10px;
+}
+
+/* SVG row item */
+.row-item-svg {
+  margin-right: 12px;
+}
+
+/* Label row item */
+.row-item-label {
+  flex-grow: 5;
+}
+
+/* Score row item */
+.row-item-score {
+  font-weight: var(--fw-black);
+}
+
+/* Center aligned flex items */
+.center-aligned-items {
+  align-items: center;
+}
+
+/* Allow flex item to shrink */
+.can-shrink {
+  min-height: 0;
+}
+
+/* Padding for the result flex column */
+.result-padding {
+  padding: 40px 50px;
+}
+
+/* Padding for the summary flex column */
+.summary-padding {
+  padding: 40px 20px;
+}
+
+/* A dark gray blue button with white text */
+button {
+  background-color: var(--clr-darkGrayBlue);
+  color: var(--clr-white);
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+
+/* Footer top margin */
+footer {
+  margin-top: 20px;
+}
+
+/* For larger screen devices */
+@media only screen and (min-width: 600px) {
+  /* Allow padding around body contents */
+  body {
+    padding: 10vh 0px;
+  }
+
+  /* Round all 4 corners */
+  .rounded-corners {
+    border-radius: 30px;
+  }
+
+  /* Adjust styling for main flex container */
+  .main-flex-container {
+    max-width: min(100%, 725px); /* cap width to 725px */
+    aspect-ratio: 10/7; /* maintain aspect ratio */
+    flex-direction: row; /* change flex direction to row */
+    border-radius: 30px; /* add rounded corners */
+  }
+
+  /* Adjust padding for the summary column */
+  .summary-padding {
+    padding: 40px 50px;
+  }
+}
+
 /** Attribution CSS **/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
